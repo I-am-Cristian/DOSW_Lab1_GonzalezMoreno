@@ -12,23 +12,6 @@ public class CarreraParalela {
     static Function<List<Integer>, Integer> cantidad = List::size;
 
     static class Resultados {
-        int max;
-        int min;
-        int cantidad;
-
-        Resultados(int max, int min, int cantidad) {
-            this.max = max;
-            this.min = min;
-            this.cantidad = cantidad;
-        }
-
-        @Override
-        public String toString() {
-            return "Resultados{max=" + max + ", min=" + min + ", cantidad=" + cantidad + "}";
-        }
-    }
-
-    static class Resultados {
     int max;
     int min;
     int cantidad;
@@ -49,5 +32,6 @@ public class CarreraParalela {
                 + ", maxEsMultiploDe2=" + maxEsMultiploDe2
                 + ", maxEsDivisorDe2=" + maxEsDivisorDe2 + "}";
     }
-    }
+    }   
+
 }
