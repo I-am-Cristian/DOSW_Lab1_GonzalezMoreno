@@ -56,6 +56,10 @@ public class CarreraParalela {
         // Segunda vuelta: ternarios sobre el máximo
         String mult2 = (max % 2 == 0) ? "SI" : "NO";
         String div2 = (max != 0 && 2 % max == 0) ? "SI" : "NO";
+        
+        //Verificar si es par o impar
+        String parImpar = (cant % 2 == 0) ? "PAR" : "IMPAR";
+
 
         return new Resultados(max, min, cant, mult2, div2);
     }
