@@ -50,5 +50,4 @@ public class CarreraParalela {
                 + ", maxEsDivisorDe2=" + maxEsDivisorDe2 + "}";
     }
     }
-
 }
