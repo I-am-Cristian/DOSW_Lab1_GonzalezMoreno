@@ -1,9 +1,8 @@
 import java.util.List;
+import java.util.function.Function;
 
 public class CarreraParalela {
 
-    // Aquí luego se unifica todo
-    public static void main(String[] args) {
-        System.out.println("Carrera Paralela - punto de partida");
-    }
+    static Function<List<Integer>, Integer> maximo = lista ->
+            lista.stream().max(Integer::compareTo).orElse(null);
 }
