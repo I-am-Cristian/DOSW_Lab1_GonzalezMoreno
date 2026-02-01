@@ -8,14 +8,20 @@
 
 ## Retos completados
 
-### Reto 1: Configuración y creación de rama
+### Reto 1: La Bienvenida
+
+### Objetivo
+Crear un mensaje de bienvenida usando Java, almacenando los estudiantes en una lista y utilizando programación funcional con `stream()`, `map()` y `lambda`.
+
+### Ejecución
+Desde la carpeta `Laboratorio1/reto1`:
+
+bash
+javac Estudiante.java Reto1.java
+java Reto1
+
 **Evidencia:**
-Captura de imagen
-
-**Descripción:**
-Breve explicación del proceso realizado para configurar el repositorio y crear una nueva rama.
-
----
+¡Hola, bienvenidos! Nosotros somos la pareja conformada por Rafael Moreno, estudiante de 6° semestre, 21 años y Crisian Gonzales, estudiante de 7° semestre, 22 años. Nuestros correos institucionales son rafael.moreno-v@mail.escuelaing.edu.co y critian.gonzalez-r@mail.escuelaing.edu.co.
 
 ### Reto 2: Commit colaborativo
 **Evidencia:**
