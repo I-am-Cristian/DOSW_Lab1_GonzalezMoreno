@@ -8,7 +8,7 @@ public class Reto1 {
 
         List<Estudiante> estudiantes = List.of(
             new Estudiante("Rafael Moreno", 21, "rafael.moreno-v@mail.escuelaing.edu.co", 6),
-            new Estudiante("Nombre Companero", 22, "critian.gonzalez-r@mail.escuelaing.edu.co", 7)
+            new Estudiante("Crisian Gonzales", 22, "critian.gonzalez-r@mail.escuelaing.edu.co", 7)
         );
 
         List<String> descripciones = estudiantes.stream()
