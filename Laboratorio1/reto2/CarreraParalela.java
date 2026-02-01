@@ -28,10 +28,27 @@ public class CarreraParalela {
         }
     }
 
-    static Resultados obtenerResultados(List<Integer> lista) {
-        int max = maximo.apply(lista);
-        int min = minimo.apply(lista);
-        int cant = cantidad.apply(lista);
-        return new Resultados(max, min, cant);
+    static class Resultados {
+    int max;
+    int min;
+    int cantidad;
+    String maxEsMultiploDe2;
+    String maxEsDivisorDe2;
+
+    Resultados(int max, int min, int cantidad, String mult2, String div2) {
+        this.max = max;
+        this.min = min;
+        this.cantidad = cantidad;
+        this.maxEsMultiploDe2 = mult2;
+        this.maxEsDivisorDe2 = div2;
     }
+
+    @Override
+    public String toString() {
+        return "Resultados{max=" + max + ", min=" + min + ", cantidad=" + cantidad
+                + ", maxEsMultiploDe2=" + maxEsMultiploDe2
+                + ", maxEsDivisorDe2=" + maxEsDivisorDe2 + "}";
+    }
+    }
+
 }
