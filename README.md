@@ -160,10 +160,6 @@ Finalmente, en la rama feature se dejó una única función mejorada que:
 ---
 
 ### Evidencia de ejecución
-
-Desde la carpeta `Laboratorio1/reto4`:
-
-```bash
 javac Reto4.java
 java Reto4
 
