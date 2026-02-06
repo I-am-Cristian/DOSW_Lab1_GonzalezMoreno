@@ -1,24 +1,34 @@
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Reto3 {
 
-    // Estudiante A: repite 3 veces usando stream() y concatena con StringBuilder
+    // A: stream() + StringBuilder (repetición)
     public static String ecoBuilder(String mensaje) {
         String repetido = IntStream.range(0, 3)
                 .mapToObj(i -> mensaje)
-                .collect(Collectors.joining(" ")); // stream() procesando repeticiones
+                .collect(Collectors.joining(" "));
 
         StringBuilder sb = new StringBuilder();
         sb.append(repetido);
         return sb.toString();
     }
 
-    // PRIMER CHOQUE: ambos crearán un método con el mismo nombre
-    // (por ahora, el A lo implementa “a su manera”)
+    // B: StringBuffer (reverse)
+    public static String ecoBufferReverse(String mensaje) {
+        return new StringBuffer(mensaje).reverse().toString();
+    }
+
+    // FUNCIÓN COMBINADA (la del “choque”): repetir 3 veces y luego invertir
     public static String ecoMisterioso(String mensaje) {
-        // A: repetir y luego invertir (puede invertir con builder o con StringBuilder reverse)
         String repetido = ecoBuilder(mensaje);
-        return new StringBuilder(repetido).reverse().toString();
+        return ecoBufferReverse(repetido);
+    }
+
+    // Lambda para invocar la función combinada
+    public static void demo() {
+        Function<String, String> eco = Reto3::ecoMisterioso; // lambda / referencia a método
+        System.out.println(eco.apply("hola"));
     }
 }
