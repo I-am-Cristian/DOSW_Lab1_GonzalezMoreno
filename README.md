@@ -217,14 +217,46 @@ Número en arena: 18
 
 
 
-### Reto 6: Etiquetas y versiones
-**Evidencia:**
-Captura de imagen
+### Reto 6: La máquina de decisiones
 
-**Descripción:**
-Descripción del uso de etiquetas (tags) en Git para marcar versiones importantes del proyecto.
+### Objetivo
+Implementar una máquina de comandos utilizando switch-case y un Map<String, Runnable> con lambdas, provocando un conflicto de merge y resolviéndolo con una versión unificada.
 
 ---
+
+### Desarrollo
+
+Se creó la rama base:
+
+feature/reto6
+
+Cada integrante trabajó desde su subrama:
+
+- Estudiante A:
+  Implementó comandos: SALUDAR, DESPEDIR, CANTAR, DANZAR.
+
+- Estudiante B:
+  Implementó comandos: BROMEAR, GRITAR, SUSURRAR, ANALIZAR.
+
+Posteriormente, ambos crearon métodos con el mismo nombre para ejecutar comandos, lo que generó un conflicto durante el merge.
+
+El conflicto fue resuelto dejando un solo switch-case unificado que ejecuta acciones almacenadas en un Map<String, Runnable> mediante expresiones lambda.
+
+---
+
+### Evidencia de ejecución
+javac Reto6.java
+java Reto6
+
+La máquina dice: ¡Saludos, viajero del tiempo y del código!
+La máquina dice: Que los bits te acompañen, hasta la próxima misión.
+La máquina canta: 01010101
+La máquina gira y emite chispas: Girando en modo fiesta.
+La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio?
+La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!
+La máquina susurra: Shhh? los bugs están dormidos
+La máquina procesa: Analizando datos? resultado: ¡Eres increíble programando!
+Comando desconocido: HACKEAR
 
 ## Preguntas teóricas
 - **Pregunta 1:**
