@@ -121,14 +121,58 @@ PS C:\Users\RafaelMoreno\Downloads\DOSW_Lab1_GonzalezMoreno> git log --oneline -
 | |\
 | | * aa061ad (origin/feature/reto2_carril_dos_MorenoRafael_2026-1, feature/reto2_carril_dos_MorenoRafael_2026-1) feat: carril 2
 
-### Reto 4: Uso de GitHub (Pull Request)
-**Evidencia:**
-Captura de imagen
+### Reto 4: El tesoro de las llaves duplicadas
 
-**Descripción:**
-Descripción del proceso de creación, revisión y aceptación de un Pull Request en GitHub.
+### Objetivo
+Implementar el uso de HashMap y Hashtable para almacenar pares clave-valor, manejar llaves duplicadas, provocar un conflicto de merge y resolverlo dejando una versión final que combine ambas estructuras usando programación funcional.
 
 ---
+
+### Desarrollo
+
+Se creó la rama base:
+
+feature/reto4
+
+Cada integrante trabajó desde una subrama:
+
+- Estudiante A:
+  Implementó un método que recibe una lista de pares (String, Integer) y los almacena en un HashMap, ignorando claves duplicadas y conservando el primer valor encontrado.
+
+- Estudiante B:
+  Implementó el mismo método pero usando Hashtable, garantizando sincronización.
+
+Posteriormente, ambos crearon un método con el mismo nombre que recibe ambos mapas y los combina en uno solo, priorizando los valores provenientes del Hashtable, lo que generó un conflicto durante el merge.
+
+Luego:
+
+- Estudiante A añadió una función que convierte todas las claves a mayúsculas antes de imprimir.
+- Estudiante B añadió una función que ordena las claves de forma ascendente antes de imprimir.
+
+Finalmente, en la rama feature se dejó una única función mejorada que:
+
+- Combina HashMap y Hashtable.
+- Prioriza valores del Hashtable.
+- Convierte claves a mayúsculas.
+- Ordena alfabéticamente.
+- Imprime usando streams, lambdas y Collectors.toMap().
+
+---
+
+### Evidencia de ejecución
+
+Desde la carpeta `Laboratorio1/reto4`:
+
+```bash
+javac Reto4.java
+java Reto4
+
+===== SALIDA TESORO =====
+Clave: DIAMANTE | Valor: 10
+Clave: ESMERALDA | Valor: 6
+Clave: ORO | Valor: 12
+Clave: PLATA | Valor: 8
+Clave: RUBÍ | Valor: 4
 
 ### Reto 5: Historial y revertir cambios
 **Evidencia:**
