@@ -18,4 +18,11 @@ public class Reto4 {
     combinado.putAll(hashTable); // pisa con Hashtable (prioridad)
     return combinado;
     }
+
+    public static void imprimirOrdenado(Map<String, Integer> mapa) {
+    mapa.entrySet().stream()
+            .sorted(Map.Entry.comparingByKey())
+            .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
+    }
+    
 }
