@@ -14,3 +14,12 @@ public class Reto4 {
 
    
 }
+public static Map<String, Integer> combinarMapas(Map<String, Integer> hashMap,
+                                                 Map<String, Integer> hashTable) {
+    Map<String, Integer> combinado = new HashMap<>(hashMap);
+    // prioriza valores del Hashtable si hay conflicto
+    for (Map.Entry<String, Integer> e : hashTable.entrySet()) {
+        combinado.put(e.getKey(), e.getValue());
+    }
+    return combinado;
+}
