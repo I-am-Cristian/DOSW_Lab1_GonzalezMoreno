@@ -12,9 +12,7 @@ public class Reto4 {
         return map;
     }
 
-   
-}
-public static Map<String, Integer> combinarMapas(Map<String, Integer> hashMap,
+   public static Map<String, Integer> combinarMapas(Map<String, Integer> hashMap,
                                                  Map<String, Integer> hashTable) {
     Map<String, Integer> combinado = new HashMap<>(hashMap);
     // prioriza valores del Hashtable si hay conflicto
@@ -22,4 +20,10 @@ public static Map<String, Integer> combinarMapas(Map<String, Integer> hashMap,
         combinado.put(e.getKey(), e.getValue());
     }
     return combinado;
+}
+public static void imprimirMayusculas(Map<String, Integer> mapa) {
+    mapa.entrySet().stream()
+            .map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()))
+            .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
+}
 }
