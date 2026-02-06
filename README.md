@@ -170,14 +170,52 @@ Clave: ORO | Valor: 12
 Clave: PLATA | Valor: 8
 Clave: RUBÍ | Valor: 4
 
-### Reto 5: Historial y revertir cambios
-**Evidencia:**
-Captura de imagen
+### Reto 5: Batalla de Conjuntos
 
-**Descripción:**
-Explicación del uso del historial de commits y del procedimiento para revertir cambios en el repositorio.
+### Objetivo
+Aplicar el uso de HashSet y TreeSet, eliminar elementos según condiciones, provocar un conflicto de merge y resolverlo, dejando una versión final que una ambas colecciones ordenadas sin duplicados utilizando programación funcional.
 
 ---
+
+### Desarrollo
+
+Se creó la rama base:
+
+feature/reto5
+
+Cada integrante trabajó desde su subrama:
+
+- Estudiante A:
+  Implementó un método que genera un HashSet con números aleatorios y elimina los múltiplos de 3.
+
+- Estudiante B:
+  Implementó un método que genera un TreeSet con números aleatorios en orden ascendente y elimina los múltiplos de 5.
+
+Posteriormente, ambos crearon un método con el mismo nombre que unía ambas colecciones en una sola estructura ordenada, lo que generó un conflicto durante el merge.
+
+El conflicto fue resuelto dejando una versión final que:
+
+- Une HashSet y TreeSet.
+- Elimina duplicados.
+- Ordena los números.
+- Filtra usando stream().filter().
+- Imprime resultados usando expresiones lambda.
+
+---
+
+### Evidencia de ejecución
+javac Reto5.java
+java Reto5
+
+Número en arena: 3
+Número en arena: 4
+Número en arena: 5
+Número en arena: 7
+Número en arena: 10
+Número en arena: 12
+Número en arena: 18
+
+
 
 ### Reto 6: Etiquetas y versiones
 **Evidencia:**
