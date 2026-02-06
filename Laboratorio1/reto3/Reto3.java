@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 public class Reto3 {
 
-    // A: stream() + StringBuilder (repetición)
+    // stream() + StringBuilder (Esta es la derepetición)
     public static String ecoBuilder(String mensaje) {
         String repetido = IntStream.range(0, 3)
                 .mapToObj(i -> mensaje)
@@ -20,7 +20,7 @@ public class Reto3 {
         return new StringBuffer(mensaje).reverse().toString();
     }
 
-    // FUNCIÓN COMBINADA (la del “choque”): repetir 3 veces y luego invertir
+    // FUNCIÓN COMBINADA: repetir 3 veces y luego invertir
     public static String ecoMisterioso(String mensaje) {
         String repetido = ecoBuilder(mensaje);
         return ecoBufferReverse(repetido);
@@ -28,7 +28,7 @@ public class Reto3 {
 
     // Lambda para invocar la función combinada
     public static void demo() {
-        Function<String, String> eco = Reto3::ecoMisterioso; // lambda / referencia a método
+        Function<String, String> eco = Reto3::ecoMisterioso; 
         System.out.println(eco.apply("hola"));
     }
 }
