@@ -10,4 +10,12 @@ public class Reto4 {
         }
         return table;
     }
+
+    public static Map<String, Integer> combinarMapas(Map<String, Integer> hashMap,
+                                                 Map<String, Integer> hashTable) {
+    Map<String, Integer> combinado = new Hashtable<>();
+    combinado.putAll(hashMap);
+    combinado.putAll(hashTable); // pisa con Hashtable (prioridad)
+    return combinado;
+    }
 }
